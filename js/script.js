@@ -26,7 +26,40 @@ document.getElementById('btn_health_wishes').addEventListener('click', () => {
    document.getElementById('p-health-wishes').innerText = arrayOfhealthWishes[index]
 })
 
+let img = 3
 
+function amin(img){
+   const mainImage = document.getElementById('main-image');
+   mainImage.style.opacity = '0'; // Почати з прозорості
+   setTimeout(() => {
+       mainImage.setAttribute('src', `img/gallery/${img}.jpg`);
+       mainImage.style.opacity = '1'; // Показати зображення
+   }, 300); // Час анімації має співпадати з transition у CSS
+}
 
+document.getElementById('btn-left-arrow').addEventListener('click', () => {
+   console.log('left')
+   img--
+   console.log(img)
+   if(img == 0){
+      img = 3
+   }
 
+   amin(img)
+
+   //document.getElementById('main-image').setAttribute('src',`img/gallery/${img}.jpg`)
+ })
+
+ document.getElementById('btn-right-arrow').addEventListener('click', () => {
+   console.log('right')
+   img++
+   console.log(img)
+   if(img == 4){
+      img = 1
+   }
+
+   amin(img)
+
+   //document.getElementById('main-image').setAttribute('src',`img/gallery/${img}.jpg`)
+ })
 
