@@ -4,7 +4,8 @@ body {
   font-size: 14px;
   line-height: 18px;
   color: #000000;
-  background: #ffffff url("../img/background.jfif") no-repeat 50% 0;
+  background: #ffffff url("../img/bg.jpeg") no-repeat 50% 0;
+  background-size: cover;
 }
 
 h1 {
@@ -156,4 +157,21 @@ h2 {
 
 .site-footer p:last-child {
   cursor: auto;
+}
+
+/* Вітаміни */
+#p-vitamins{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.vitamin{
+  border: #999999 1px solid;
+  box-shadow: 10px 10px 20px #c4c4c4;
+  padding: 10px;
+  width: 200px;
+  height: 300px;
 }
